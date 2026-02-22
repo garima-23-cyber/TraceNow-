@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cyber-black: #020617;
+  --color-cyber-blue: #3b82f6;
+  --color-cyber-silver: #94a3b8;
+  --color-cyber-gold: #fbbf24;
+  --color-cyber-red: #ef4444;
+  --color-cyber-green: #22c55e;
+}
+
+@layer base {
+  body {
+    @apply bg-cyber-black text-slate-300 font-sans antialiased;
+    background-image: 
+      radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 0% 100%, rgba(251, 191, 36, 0.03) 0%, transparent 30%);
+    background-attachment: fixed;
+  }
+
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { @apply bg-slate-950; }
+  ::-webkit-scrollbar-thumb { @apply bg-slate-800 rounded-full hover:bg-cyber-blue; }
+}
+
+.cyber-card {
+  @apply bg-slate-900/40 border border-slate-800 backdrop-blur-md rounded-xl shadow-2xl overflow-hidden relative;
+  transition: all 0.3s ease;
+}
+
+.cyber-card:hover {
+  @apply border-slate-700 bg-slate-900/60;
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.1);
+}
+
+/* Trading Ticker Animation */
+.ticker-red { color: #ef4444; text-shadow: 0 0 8px rgba(239, 68, 68, 0.4); }
+.ticker-green { color: #22c55e; text-shadow: 0 0 8px rgba(34, 197, 94, 0.4); }
+
+/* Add to src/index.css */
+
+/* Profit/Loss Glows */
+.ticker-pos { color: #22c55e; text-shadow: 0 0 10px rgba(34, 197, 94, 0.4); }
+.ticker-neg { color: #ef4444; text-shadow: 0 0 10px rgba(239, 68, 68, 0.4); }
+
+/* The "Flow" scanline effect across the dashboard */
+.scanline {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(59, 130, 246, 0.03) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 100% 4px;
+  position: absolute;
+  pointer-events: none;
+}
+
+/* Smooth scrolling for your Behavioral Report */
+.custom-scrollbar::-webkit-scrollbar { width: 3px; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
