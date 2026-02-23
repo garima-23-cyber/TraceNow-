@@ -1,131 +1,134 @@
-🕵️‍♂️ TraceNow — Neural Network Forensic Analyzer
+# 🕵️‍♂️ TraceNow — Neural Network Forensic Analyzer
 
-TraceNow is a real-time Deep Packet Inspection (DPI) and Network Visualization Suite designed for digital investigators, SOC analysts, and cybersecurity researchers.
-It bridges low-level packet capture with high-level behavioral analytics, acting as a central Nerve Center for network integrity monitoring.
+TraceNow is a **real-time Deep Packet Inspection (DPI) and Network Visualization Suite** built for **digital investigators, SOC analysts, and cybersecurity researchers**.  
+It bridges the gap between low-level packet capture and high-level behavioral analytics, acting as a centralized **Nerve Center for network integrity monitoring**.
 
-🧠 What Makes TraceNow Unique?
-Capability	Description
-🧠 Nerve Center Interface	High-volatility dashboard optimized for real-time incident response
-🌐 3D Tracker Graph	Dynamic visualization of network nodes and threat paths
-🔍 Deep Packet Dissection	Live inspection of TCP, UDP, TLSv1.3, HTTP traffic
-📊 Behavioral Integrity Index	Calculates a real-time Privacy Integrity Score
-🔐 Session-Isolated Forensics	Multi-investigator monitoring with zero data leakage
-📸 Interface & Visualization Preview
+---
 
-(Replace image URLs with your actual screenshots stored in /assets or GitHub uploads)
+## ⚡ Unique Forensic Capabilities
 
-Module	Preview	Description
-🧠 Nerve Center Dashboard	
-	Real-time uplink status, protocol integrity & alert signals
-🌍 Geolocation Mapping	
-	Maps packet origins & destinations geographically
-📈 Behavioral Tracking	
-	Detects anomalies, unencrypted flows & packet deviation
-🧬 3D Tracker Graph	
-	Interactive node-based threat visualization
-📘 Forensic Guide Panel	
-	Investigator-focused packet interpretation & flags
-🧬 Behavioral & Geolocation Intelligence
+- 🧠 **Nerve Center Dashboard** for rapid incident response  
+- 🌐 **3D Network Tracker Graph** for visualizing live data flows  
+- 🔍 **Deep Packet Dissection** (TCP, UDP, TLSv1.3, HTTP)  
+- 📊 **Behavioral Integrity Index** with Privacy Integrity Score  
+- 🔐 **Session-Isolated Monitoring** using Socket.io rooms  
 
-TraceNow does more than packet capture — it reasons about behavior.
+---
 
-🔍 Behavioral Integrity Index
 
-Detects unencrypted payloads
+## 📸 Application Screenshots
 
-Flags protocol misuse
+> Screenshots are embedded directly from GitHub uploads (no local image folder required)
 
-Monitors session deviations
+| Feature | Screenshot | Description |
+|------|-----------|------------|
+| 🧠 **Nerve Center Dashboard** | <img width="1906" height="913" alt="Screenshot 2026-02-23 114949" src="https://github.com/user-attachments/assets/d3475414-05e7-4720-b29d-2c9324cf07cb" /> | Real-time uplink status, protocol health & alerts |
+| 🌍 **Geolocation Intelligence** | <img width="1916" height="918" alt="Screenshot 2026-02-23 115011" src="https://github.com/user-attachments/assets/797a1ed4-1e3f-4b48-a832-1a8a32dcf5e5" /> | Visual mapping of packet origins and destinations |
+| 📈 **Behavioral Tracking** | <img width="1907" height="917" alt="Screenshot 2026-02-23 115040" src="https://github.com/user-attachments/assets/34580700-89d0-40bb-a360-a2fdf305c71e" /> | Anomaly detection & integrity scoring |
+| 🧬 **3D Tracker Graph** | <img width="1913" height="920" alt="Screenshot 2026-02-23 115027" src="https://github.com/user-attachments/assets/28f37307-d958-4812-826c-e16559d98273" /> | Interactive threat-node visualization |
+| 📘 **Forensic Guide Panel** | <img width="1914" height="918" alt="Screenshot 2026-02-23 115055" src="https://github.com/user-attachments/assets/6c337cb3-2dfc-4121-ad15-f0b273f06415" /> | Investigator-focused packet interpretation |
 
-Generates a Privacy Integrity Score (0–100)
+---
 
-🌍 Geolocation Tracking
+## 🧬 Behavioral & Geolocation Analysis
 
-IP-based origin mapping
+### 🔍 Behavioral Integrity Index
+- Detects unencrypted payloads
+- Flags protocol anomalies
+- Tracks abnormal session behavior
+- Produces a **Privacy Integrity Score (0–100)**
 
-Cross-region traffic anomaly detection
+### 🌍 Geolocation Tracking
+- IP-based origin mapping
+- Suspicious region correlation
+- Visual threat clustering
 
-Visual threat clustering
+---
 
-🛠️ The Forensic Stack
-Layer	Technology
-🎨 Frontend	React 19 + Vite
-💅 Styling	Tailwind CSS + Framer Motion
-🧠 Backend	Node.js + Express
-⚡ Real-Time Engine	Socket.io
-🔬 Analysis Engine	TShark (Wireshark Core)
-📊 Visualization	D3.js + WebGL (3D Graphs)
-🧩 System Architecture (Illustrated)
- ┌──────────────────────────┐
- │   Network Interface      │
- │  (Promiscuous Mode)      │
- └───────────┬──────────────┘
-             │
-             ▼
- ┌──────────────────────────┐
- │   TShark Capture Engine  │
- │  (Raw Packet Frames)    │
- └───────────┬──────────────┘
-             │
-             ▼
- ┌──────────────────────────┐
- │ Backend Dissection Layer │
- │ (Hex → JSON Parsing)    │
- └───────────┬──────────────┘
-             │
-     Socket.io Uplink
-             │
-             ▼
- ┌──────────────────────────┐
- │ React Nerve Center UI    │
- │ • Dashboard              │
- │ • 3D Tracker Graph       │
- │ • Integrity Index        │
- └──────────────────────────┘
-🚀 Installation & Local Deployment
+## 🛠️ Forensic Technology Stack
 
-⚠️ Local deployment only
-Cloud platforms (Vercel/Render) cannot access network interfaces or promiscuous mode.
+| Layer | Technology |
+|----|-----------|
+| 🎨 Frontend | React 19 + Vite |
+| 💅 Styling | Tailwind CSS + Framer Motion |
+| 🧠 Backend | Node.js + Express |
+| ⚡ Real-Time Engine | Socket.io |
+| 🔬 Analysis Engine | TShark (Wireshark Core) |
+| 📊 Visualization | D3.js + WebGL |
 
-🔧 Prerequisites (Forensic Engine)
-Windows
+---
 
-Install Wireshark
+## 🧩 System Architecture
+┌────────────────────────────┐
+│ Network Interface │
+│ (Promiscuous Mode Enabled) │
+└─────────────┬──────────────┘
+│
+▼
+┌────────────────────────────┐
+│ TShark Capture Engine │
+│ (Raw Packet Frames) │
+└─────────────┬──────────────┘
+│
+▼
+┌────────────────────────────┐
+│ Backend Dissection Layer │
+│ (Hex → JSON Parsing) │
+└─────────────┬──────────────┘
+│
+Socket.io Uplink
+│
+▼
+┌────────────────────────────┐
+│ React Nerve Center UI │
+│ • Dashboard │
+│ • 3D Tracker Graph │
+│ • Integrity Index │
+└────────────────────────────┘
 
-Ensure Npcap is installed with
-✅ WinPcap API-compatible Mode
+---
 
-Linux
+## 🚀 Installation & Local Deployment
+
+> ⚠️ **Local execution only**  
+Cloud platforms cannot access low-level network interfaces.
+
+---
+
+### 🔧 Prerequisites
+
+**Windows**
+- Install Wireshark
+- Enable **Npcap (WinPcap-compatible mode)**
+
+**Linux**
+```bash
 sudo apt install tshark libpcap-dev
-📦 Setup
-# Clone the repository
+
 git clone https://github.com/your-username/TraceNow.git
 
-# Backend
 cd backend
 npm install
 
-# Frontend
 cd ../frontend
 npm install --legacy-peer-deps
-▶️ Launching the Nerve Center
-# Start backend
+
+# Backend
 cd backend
 npm run dev
 
-# Start frontend
+# Frontend
 cd ../frontend
 npm run dev
 
-📍 Access: http://localhost:5173
+---
 
 🛡️ Ethics & Legal Disclaimer
 
-TraceNow is strictly for educational, research, and authorized forensic use.
+TraceNow is developed strictly for educational, research, and authorized forensic use.
+Unauthorized interception or monitoring of network traffic without permission is illegal.
 
-Unauthorized interception, monitoring, or analysis of network traffic without ownership or explicit permission is illegal and punishable under cyber laws.
-
-⚖️ The developer assumes no responsibility for misuse of this tool.
+⚖️ The developer assumes no responsibility for misuse.
 
 ✨ Ideal Use Cases
 
@@ -138,3 +141,5 @@ Unauthorized interception, monitoring, or analysis of network traffic without ow
 🕵️ Digital Forensics Labs
 
 🚨 Incident Response Simulations
+
+
