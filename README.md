@@ -1,17 +1,20 @@
 # 🕵️‍♂️ TraceNow — Neural Network Forensic Analyzer
 
-TraceNow is a **real-time Deep Packet Inspection (DPI) and Network Visualization Suite** built for **digital investigators, SOC analysts, and cybersecurity researchers**.  
-It bridges the gap between low-level packet capture and high-level behavioral analytics, acting as a centralized **Nerve Center for network integrity monitoring**.
+TraceNow is a **real-time Deep Packet Inspection (DPI), Flow Analysis, and Network Visualization Suite** built for **digital investigators, SOC analysts, and cybersecurity researchers**.  
+It bridges the gap between **low-level packet capture** and **high-level behavioral intelligence**, acting as a centralized **Nerve Center for network integrity, privacy, and threat monitoring**.
 
 ---
 
 ## ⚡ Unique Forensic Capabilities
 
-- 🧠 **Nerve Center Dashboard** for rapid incident response  
-- 🌐 **3D Network Tracker Graph** for visualizing live data flows  
-- 🔍 **Deep Packet Dissection** (TCP, UDP, TLSv1.3, HTTP)  
-- 📊 **Behavioral Integrity Index** with Privacy Integrity Score  
-- 🔐 **Session-Isolated Monitoring** using Socket.io rooms  
+- 🧠 **Nerve Center Dashboard** — high-volatility UI for rapid incident response  
+- 🔄 **Live Flow Data Visualization** — visualizes packet-to-packet communication paths  
+- 🌐 **3D Network Tracker Graph** — interactive mapping of live data flows & threat nodes  
+- 🔍 **Deep Packet Dissection** — TCP, UDP, TLSv1.3, HTTP protocol inspection  
+- 📊 **Behavioral Integrity Index** — real-time **Privacy Integrity Score (0–100)**  
+- 🌍 **Geolocation Intelligence** — global packet origin & destination tracking  
+- 📘 **Forensic Guide Panel** — investigator-friendly protocol explanations & flags  
+- 🔐 **Session-Isolated Monitoring** — secure multi-investigator analysis using Socket.io rooms   
 
 ---
 
@@ -60,30 +63,34 @@ It bridges the gap between low-level packet capture and high-level behavioral an
 
 ## 🧩 System Architecture
 ┌────────────────────────────┐
-│ Network Interface │
+│   Network Interface        │
 │ (Promiscuous Mode Enabled) │
 └─────────────┬──────────────┘
-│
-▼
+              │
+              ▼
 ┌────────────────────────────┐
-│ TShark Capture Engine │
-│ (Raw Packet Frames) │
+│   TShark Capture Engine    │
+│   (Raw Packet Frames)     │
 └─────────────┬──────────────┘
-│
-▼
+              │
+              ▼
 ┌────────────────────────────┐
-│ Backend Dissection Layer │
-│ (Hex → JSON Parsing) │
+│ Backend Dissection Layer   │
+│ • Packet Parsing           │
+│ • Flow Correlation         │
+│ • Behavioral Analysis     │
+│ • Privacy Scoring          │
 └─────────────┬──────────────┘
-│
-Socket.io Uplink
-│
-▼
+              │
+        Socket.io Uplink
+              │
+              ▼
 ┌────────────────────────────┐
-│ React Nerve Center UI │
-│ • Dashboard │
-│ • 3D Tracker Graph │
-│ • Integrity Index │
+│ React Nerve Center UI      │
+│ • Dashboard                │
+│ • Flow Visualization       │
+│ • Geolocation Tracker      │
+│ • Forensic Guide Panel     │
 └────────────────────────────┘
 
 ---
@@ -120,26 +127,20 @@ npm run dev
 # Frontend
 cd ../frontend
 npm run dev
+```
+## 🛡️ Ethics & Legal Disclaimer
 
----
+TraceNow is developed **strictly for educational, research, and authorized forensic purposes**.
 
-🛡️ Ethics & Legal Disclaimer
+This tool is designed to analyze **network traffic on systems and networks that you own or have explicit permission to inspect**. Any unauthorized interception, monitoring, or analysis of network data **without consent** may violate applicable cyber laws and regulations.
 
-TraceNow is developed strictly for educational, research, and authorized forensic use.
-Unauthorized interception or monitoring of network traffic without permission is illegal.
+By using TraceNow, you agree to:
+- Operate the tool only in **legally authorized environments**
+- Respect **privacy, data protection, and ethical cybersecurity practices**
+- Assume full responsibility for compliance with local and international laws
 
-⚖️ The developer assumes no responsibility for misuse.
+⚖️ The developer(s) and contributors **assume no liability** for misuse, damage, or legal consequences resulting from the use of this software.
 
-✨ Ideal Use Cases
-
-🔐 SOC & Blue Team Training
-
-🎓 Cybersecurity Education
-
-🧪 Network Behavior Research
-
-🕵️ Digital Forensics Labs
-
-🚨 Incident Response Simulations
+Use responsibly. Analyze ethically. Investigate legally.
 
 
