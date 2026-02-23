@@ -21,7 +21,7 @@ It bridges the gap between **low-level packet capture** and **high-level behavio
 
 ## 📸 Application Screenshots
 
-> Screenshots are embedded directly from GitHub uploads (no local image folder required)
+
 
 | Feature | Screenshot | Description |
 |------|-----------|------------|
@@ -63,9 +63,9 @@ It bridges the gap between **low-level packet capture** and **high-level behavio
 
 ## 🧩 System Architecture
 > **Data Flow Overview:** From raw packet capture to real-time forensic intelligence
-> <p align="center">
-    <img width="1024" height="1536" alt="sys_arch_traceNow" src="https://github.com/user-attachments/assets/a2aaa85f-6622-4a99-8410-93dc8b4c5270" />
-  </p>
+<p align="center">
+  <img width="1024" alt="TraceNow System Architecture" src="https://github.com/user-attachments/assets/a2aaa85f-6622-4a99-8410-93dc8b4c5270" />
+</p>
 
 
 ---
